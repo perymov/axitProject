@@ -187,7 +187,6 @@ h2 {
 		@include flexbox();
 		flex: 0 0 100%;
 		align-items: flex-start;
-		margin: 0px 0px 0px 8px;
 		@media (max-width: 1000px) {
 			margin: 0;
 		}
