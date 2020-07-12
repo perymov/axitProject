@@ -1,0 +1,397 @@
+/*----------------------------HEADER------------------------*/
+
+@media (max-width: 1100px) {
+	body.lock {
+		overflow: hidden;
+	}
+}
+.header {
+	min-width: 100%;
+	position: relative;
+	&__bg {
+		background-color: #9a9a9a;
+		background-size: cover;
+		z-index: -1;
+	}
+	&__menu {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 50;
+		height: 70px;
+		background-color: #000;
+		@include flexbox();
+		justify-content: space-between;
+		align-items: center;
+		@media (max-width: 1100px) {
+		}
+		.container {
+			@include flexbox();
+			justify-content: space-between;
+			align-items: center;
+			max-width: 1130px;
+		}
+	}
+	@media (max-width: 767px) {
+		&__menu::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: #000;
+			z-index: 11;
+		}
+	}
+	&__body {
+		@include flexbox();
+		flex: 1 1 100%;
+	}
+}
+.bg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+h2 {
+	opacity: 0.21;
+	color: #ffffff;
+	font-size: 33px;
+	text-align: center;
+	margin: 130px 70px 16px 0px;
+	@media (max-width: 1100px) {
+		margin: 100px 0px 25px 0px;
+	}
+	@media (max-width: 767px) {
+		margin: 100px 0px 25px 0px;
+	}
+}
+.nav {
+	&__logo {
+		z-index: 50;
+		@media (max-width: 767px) {
+			margin: 0px auto;
+		}
+	}
+
+	&__menu {
+		@include flexbox();
+
+		.menu__link {
+			opacity: 0.8;
+			font-size: 14px;
+			font-weight: 600;
+			color: #ffffff;
+
+			@media (max-width: 767px) {
+				font-size: 20px;
+			}
+		}
+		li {
+			margin: 0px 48px 0px 0px;
+		}
+		li:last-child {
+			margin: 0;
+		}
+		@media (max-width: 767px) {
+			margin: 0px auto;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			li {
+				padding: 0px 0px 45px 0px;
+				margin: 0;
+				&:nth-child(2),
+				&:nth-child(3) {
+					padding: 0px 0px 45px 0px;
+				}
+				&:last-child {
+					padding: 0;
+				}
+			}
+		}
+	}
+}
+.menu {
+	&__icon {
+		@media (max-width: 767px) {
+			position: absolute;
+			display: block;
+			top: 22px;
+			right: 20px;
+			width: 40px;
+			height: 25px;
+			cursor: pointer;
+			z-index: 12;
+			span {
+				@include anim(0.3s, 0s);
+				background-color: #fff;
+				opacity: 0.8;
+				top: 11px;
+				position: absolute;
+				left: 0;
+				width: 100%;
+				height: 3px;
+				&:first-child {
+					top: 0;
+				}
+				&:last-child {
+					top: 22px;
+				}
+			}
+			&.active {
+				span {
+					@include scale(0);
+					background-color: #fff;
+					&:first-child {
+						@include rotate(-675deg);
+						top: 11px;
+					}
+					&:last-child {
+						@include rotate(675deg);
+						top: 10px;
+					}
+				}
+			}
+		}
+	}
+	@media (max-width: 767px) {
+		&__body {
+			position: fixed;
+			z-index: 10;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			overflow: auto;
+			background-color: rgb(23, 56, 56);
+			padding: 150px 0 20px 0;
+			@include tr(0px, -100%, 0px);
+			@include anim(0.3s, 0s);
+			&.active {
+				@include tr(0px, 0px, 0px);
+			}
+		}
+
+		&__link {
+			color: #fff;
+			font-size: 20px;
+		}
+	}
+}
+
+.body-header {
+	&__row {
+		@include flexbox();
+		flex: 0 0 100%;
+		align-items: flex-start;
+		margin: 0px 0px 0px 8px;
+		@media (max-width: 1000px) {
+			margin: 0;
+		}
+	}
+}
+.row-header {
+	&__column-1 {
+		flex: 1 0 65%;
+		@media (max-width: 1000px) {
+			text-align: center;
+		}
+	}
+
+	&__column-2 {
+		flex: 1 0 35%;
+	}
+	@media (max-width: 1000px) {
+		flex-wrap: wrap;
+	}
+}
+.column-1 {
+	@include flexbox();
+	flex-direction: column;
+	@media (max-width: 1000px) {
+		align-items: center;
+		flex: 1 1 100%;
+	}
+	&__logo {
+		margin: 0px 0px 33px 0px;
+	}
+
+	&__title {
+		position: relative;
+		max-width: 515px;
+		font-family: "Raleway";
+		font-size: 36px;
+		font-weight: 400;
+		color: #ffffff;
+		margin: 0px 0px 70px 0px;
+		&:after {
+			content: "";
+			position: relative;
+			display: block;
+			width: 64px;
+			height: 2px;
+			background-color: #fff;
+			left: 5px;
+			top: 35px;
+			@media (max-width: 1000px) {
+				margin: 0px auto;
+			}
+		}
+	}
+
+	&__text {
+		opacity: 0.8;
+		font-family: Raleway;
+		font-size: 16px;
+		line-height: 23px;
+		font-weight: 300;
+		color: #ffffff;
+		max-width: 461px;
+		margin: 0px 0px 44px 0px;
+		@media (max-width: 767px) {
+			margin: 0px 0px 15px 0px;
+		}
+	}
+
+	&__button {
+		margin: 0px 0px 139px 0px;
+		@media (max-width: 1000px) {
+			margin: 0;
+		}
+	}
+}
+
+.btn {
+	border: 1px solid #fff;
+	max-width: 135px;
+	font-size: 15px;
+	font-weight: 600;
+	color: #ffffff;
+	padding: 11px 32px;
+	background-color: transparent;
+}
+
+.column-2 {
+	@include flexbox();
+	max-width: 360px;
+	justify-content: center;
+	margin: 0px 0px 139px 0px;
+	@media (max-width: 1000px) {
+		margin: 20px auto;
+	}
+
+	&__body {
+		flex: 0 1 100%;
+		@include flexbox();
+		background-color: #fff;
+		flex-direction: column;
+		align-items: center;
+		border-radius: 5px;
+		overflow: hidden;
+		margin-top: 35px;
+		@media (max-width: 1000px) {
+		}
+	}
+
+	&__title {
+		text-align: center;
+		background-color: #f5f5f5;
+		margin: 0px 0px 29px 0px;
+		flex: 0 1 54px;
+		@include flexbox();
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		p {
+			font-family: "Open Sans";
+			font-size: 20px;
+			line-height: 1.2;
+			font-weight: 700;
+			color: #333333;
+		}
+		span {
+			color: #ff8b38;
+		}
+	}
+
+	&__form {
+		box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.15);
+		width: 285px;
+		height: 32px;
+		margin: 0px auto;
+	}
+
+	&__button {
+		flex: 0 1 54px;
+		height: 54px;
+
+		@include flexbox();
+		background-color: #ff9b51;
+		width: 100%;
+	}
+
+	&__btn {
+		font-family: "Open Sans";
+		font-size: 15px;
+		line-height: 1.2;
+		font-weight: 600;
+		color: #ffffff;
+		background-color: #ff9b51;
+		width: 100%;
+		height: 100%;
+	}
+}
+.header__form {
+	width: 100%;
+	flex: 1 1 auto;
+	max-width: 360px;
+	@include flexbox();
+	flex-direction: column;
+	align-items: center;
+}
+.form {
+	&__name {
+		margin: 0px 0px 35px 0px;
+		@include flexbox();
+		.name {
+			padding: 0px 0px 0px 14px;
+			font-family: "Open Sans";
+			font-size: 14px;
+			line-height: 1.2;
+			font-weight: 400;
+			color: #bdbdbd;
+			opacity: 0.6;
+		}
+	}
+
+	&__email {
+		margin: 0px 0px 46px 0px;
+		@include flexbox();
+		.mail {
+			padding: 0px 0px 0px 14px;
+			font-family: "Open Sans";
+			font-size: 14px;
+			line-height: 1.2;
+			font-weight: 400;
+			color: #bdbdbd;
+			opacity: 0.6;
+		}
+	}
+
+	&__password {
+		margin: 0px 0px 48px 0px;
+		@include flexbox();
+		.password {
+			padding: 0px 0px 0px 14px;
+			font-family: "Open Sans";
+			font-size: 14px;
+			line-height: 1.2;
+			font-weight: 400;
+			color: #bdbdbd;
+			opacity: 0.6;
+		}
+	}
+}
