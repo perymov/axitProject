@@ -205,18 +205,18 @@ h2 {
   color: #ffffff;
   font-size: 33px;
   text-align: center;
-  margin: 130px 70px 16px 0px;
+  padding: 130px 70px 16px 0px;
 }
 
 @media (max-width: 1100px) {
   h2 {
-    margin: 100px 0px 25px 0px;
+    padding: 100px 0px 25px 0px;
   }
 }
 
 @media (max-width: 767px) {
   h2 {
-    margin: 100px 0px 25px 0px;
+    padding: 100px 0px 25px 0px;
   }
 }
 
@@ -625,14 +625,44 @@ h2 {
   font-size: 0;
 }
 
-.form__name .name {
-  padding: 0px 0px 0px 14px;
+.form__name .name::-webkit-input-placeholder {
   font-family: "Open Sans";
   font-size: 14px;
   line-height: 1.2;
-  font-weight: 400;
   color: #bdbdbd;
   opacity: 0.6;
+}
+
+.form__name .name:-ms-input-placeholder {
+  font-family: "Open Sans";
+  font-size: 14px;
+  line-height: 1.2;
+  color: #bdbdbd;
+  opacity: 0.6;
+}
+
+.form__name .name::-ms-input-placeholder {
+  font-family: "Open Sans";
+  font-size: 14px;
+  line-height: 1.2;
+  color: #bdbdbd;
+  opacity: 0.6;
+}
+
+.form__name .name::placeholder {
+  font-family: "Open Sans";
+  font-size: 14px;
+  line-height: 1.2;
+  color: #bdbdbd;
+  opacity: 0.6;
+}
+
+.form__name .name {
+  padding: 0px 0px 0px 14px;
+  font-family: "Open Sans";
+  font-size: 16px;
+  line-height: 1.2;
+  color: #000;
 }
 
 .form__email {
@@ -643,14 +673,44 @@ h2 {
   font-size: 0;
 }
 
-.form__email .mail {
-  padding: 0px 0px 0px 14px;
+.form__email .mail::-webkit-input-placeholder {
   font-family: "Open Sans";
   font-size: 14px;
   line-height: 1.2;
-  font-weight: 400;
   color: #bdbdbd;
   opacity: 0.6;
+}
+
+.form__email .mail:-ms-input-placeholder {
+  font-family: "Open Sans";
+  font-size: 14px;
+  line-height: 1.2;
+  color: #bdbdbd;
+  opacity: 0.6;
+}
+
+.form__email .mail::-ms-input-placeholder {
+  font-family: "Open Sans";
+  font-size: 14px;
+  line-height: 1.2;
+  color: #bdbdbd;
+  opacity: 0.6;
+}
+
+.form__email .mail::placeholder {
+  font-family: "Open Sans";
+  font-size: 14px;
+  line-height: 1.2;
+  color: #bdbdbd;
+  opacity: 0.6;
+}
+
+.form__email .mail {
+  padding: 0px 0px 0px 14px;
+  font-family: "Open Sans";
+  font-size: 16px;
+  line-height: 1.2;
+  color: #000;
 }
 
 .form__password {
@@ -661,14 +721,44 @@ h2 {
   font-size: 0;
 }
 
-.form__password .password {
-  padding: 0px 0px 0px 14px;
+.form__password .password::-webkit-input-placeholder {
   font-family: "Open Sans";
   font-size: 14px;
   line-height: 1.2;
-  font-weight: 400;
   color: #bdbdbd;
   opacity: 0.6;
+}
+
+.form__password .password:-ms-input-placeholder {
+  font-family: "Open Sans";
+  font-size: 14px;
+  line-height: 1.2;
+  color: #bdbdbd;
+  opacity: 0.6;
+}
+
+.form__password .password::-ms-input-placeholder {
+  font-family: "Open Sans";
+  font-size: 14px;
+  line-height: 1.2;
+  color: #bdbdbd;
+  opacity: 0.6;
+}
+
+.form__password .password::placeholder {
+  font-family: "Open Sans";
+  font-size: 14px;
+  line-height: 1.2;
+  color: #bdbdbd;
+  opacity: 0.6;
+}
+
+.form__password .password {
+  padding: 0px 0px 0px 14px;
+  font-family: "Open Sans";
+  font-size: 16px;
+  line-height: 1.2;
+  color: #000;
 }
 
 /*----------------------------------SOCIAL---------------------------------------------*/
@@ -798,6 +888,7 @@ h2 {
 @media (max-width: 1000px) {
   .tabs {
     padding: 40px 0px 0px 0px;
+    margin: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1455,7 +1546,7 @@ h2 {
 
 @media (max-width: 1000px) {
   .advantages__title {
-    margin: 50px 0px 15px 0px;
+    margin: 80px 0px 15px 0px;
   }
 }
 
@@ -1492,7 +1583,7 @@ h2 {
 
 @media (max-width: 1000px) {
   .title:after {
-    margin: 15px auto 0px auto;
+    margin: 50px auto 0px auto;
   }
 }
 
@@ -1621,7 +1712,7 @@ h2 {
 
 @media (max-width: 1000px) {
   .pricing__title {
-    margin: 50px 0px 20px 0px;
+    margin: 80px 0px 20px 0px;
   }
 }
 
@@ -1796,12 +1887,14 @@ h2 {
 
 /*----------------------------------REVIEWS---------------------------------------------*/
 .reviews__title {
-  margin: 108px 0px 32px 0px;
+  margin: 0px 0px 32px 0px;
+  padding: 108px 0px 0px 0px;
 }
 
 @media (max-width: 1000px) {
   .reviews__title {
-    margin: 50px 0px 15px 0px;
+    margin: 0px 0px 15px 0px;
+    padding: 80px 0px 0px 0px;
   }
 }
 
@@ -1947,12 +2040,14 @@ h2 {
 
 /*----------------------------------CONTACT---------------------------------------------*/
 .contact__title {
-  margin: 108px 0px 32px 0px;
+  margin: 0px 0px 32px 0px;
+  padding: 108px 0px 0px 0px;
 }
 
 @media (max-width: 1000px) {
   .contact__title {
-    margin: 50px 0px 15px 0px;
+    margin: 0px 0px 15px 0px;
+    padding: 80px 0px 0px 0px;
   }
 }
 
@@ -1964,6 +2059,10 @@ h2 {
   .contact__text {
     margin: 0px 0px 30px 0px;
   }
+}
+
+.contact__form {
+  max-width: 100%;
 }
 
 .contact__block {
@@ -1980,7 +2079,7 @@ h2 {
 
 @media (max-width: 1000px) {
   .contact__block {
-    width: 80%;
+    width: 60%;
     margin: 0px auto 20px;
   }
 }
@@ -2005,10 +2104,6 @@ h2 {
 
 .contact .container {
   max-width: 1151px;
-}
-
-.contact__form {
-  max-width: 100%;
 }
 
 .contact-row {
@@ -2060,22 +2155,179 @@ h2 {
   }
 }
 
+.block-form input {
+  padding: 0px 0px 10px 13px;
+}
+
 .block__form {
   -webkit-box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.15);
   margin: 0px 0px 29px 0px;
+  height: 32px;
 }
 
 .block__form:last-child {
   margin: 0;
 }
 
-.block-form input {
-  padding: 0px 0px 10px 13px;
+.name::-webkit-input-placeholder {
+  font-family: "Open Sans";
+  font-size: 14px;
+  line-height: 1.2;
+  color: #bdbdbd;
+  opacity: 0.6;
+}
+
+.name:-ms-input-placeholder {
+  font-family: "Open Sans";
+  font-size: 14px;
+  line-height: 1.2;
+  color: #bdbdbd;
+  opacity: 0.6;
+}
+
+.name::-ms-input-placeholder {
+  font-family: "Open Sans";
+  font-size: 14px;
+  line-height: 1.2;
+  color: #bdbdbd;
+  opacity: 0.6;
+}
+
+.name::placeholder {
+  font-family: "Open Sans";
+  font-size: 14px;
+  line-height: 1.2;
+  color: #bdbdbd;
+  opacity: 0.6;
+}
+
+.name {
+  padding: 0px 0px 0px 14px;
+  font-family: "Open Sans";
+  font-size: 16px;
+  line-height: 1.2;
+  color: #000;
+}
+
+.mail::-webkit-input-placeholder {
+  font-family: "Open Sans";
+  font-size: 14px;
+  line-height: 1.2;
+  color: #bdbdbd;
+  opacity: 0.6;
+}
+
+.mail:-ms-input-placeholder {
+  font-family: "Open Sans";
+  font-size: 14px;
+  line-height: 1.2;
+  color: #bdbdbd;
+  opacity: 0.6;
+}
+
+.mail::-ms-input-placeholder {
+  font-family: "Open Sans";
+  font-size: 14px;
+  line-height: 1.2;
+  color: #bdbdbd;
+  opacity: 0.6;
+}
+
+.mail::placeholder {
+  font-family: "Open Sans";
+  font-size: 14px;
+  line-height: 1.2;
+  color: #bdbdbd;
+  opacity: 0.6;
+}
+
+.mail {
+  padding: 0px 0px 0px 14px;
+  font-family: "Open Sans";
+  font-size: 16px;
+  line-height: 1.2;
+  color: #000;
+}
+
+.subject::-webkit-input-placeholder {
+  font-family: "Open Sans";
+  font-size: 14px;
+  line-height: 1.2;
+  color: #bdbdbd;
+  opacity: 0.6;
+}
+
+.subject:-ms-input-placeholder {
+  font-family: "Open Sans";
+  font-size: 14px;
+  line-height: 1.2;
+  color: #bdbdbd;
+  opacity: 0.6;
+}
+
+.subject::-ms-input-placeholder {
+  font-family: "Open Sans";
+  font-size: 14px;
+  line-height: 1.2;
+  color: #bdbdbd;
+  opacity: 0.6;
+}
+
+.subject::placeholder {
+  font-family: "Open Sans";
+  font-size: 14px;
+  line-height: 1.2;
+  color: #bdbdbd;
+  opacity: 0.6;
+}
+
+.subject {
+  padding: 0px 0px 0px 14px;
+  font-family: "Open Sans";
+  font-size: 16px;
+  line-height: 1.2;
+  color: #000;
+}
+
+.textarea::-webkit-input-placeholder {
+  font-family: "Open Sans";
+  font-size: 14px;
+  line-height: 1.2;
+  color: #bdbdbd;
+  opacity: 0.6;
+}
+
+.textarea:-ms-input-placeholder {
+  font-family: "Open Sans";
+  font-size: 14px;
+  line-height: 1.2;
+  color: #bdbdbd;
+  opacity: 0.6;
+}
+
+.textarea::-ms-input-placeholder {
+  font-family: "Open Sans";
+  font-size: 14px;
+  line-height: 1.2;
+  color: #bdbdbd;
+  opacity: 0.6;
+}
+
+.textarea::placeholder {
+  font-family: "Open Sans";
+  font-size: 14px;
+  line-height: 1.2;
+  color: #bdbdbd;
+  opacity: 0.6;
 }
 
 .textarea {
-  padding: 0px 0px 0px 13px;
+  padding: 0px 0px 0px 14px;
+  font-family: "Open Sans";
+  font-size: 16px;
+  line-height: 1.2;
+  color: #000;
   -webkit-box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.15);
   width: 100%;
@@ -2083,7 +2335,7 @@ h2 {
 
 @media (max-width: 1000px) {
   .textarea {
-    width: 80%;
+    width: 60%;
   }
 }
 

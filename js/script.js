@@ -1,10 +1,17 @@
 $(document).ready(function () {
+	// МЕНЮ БУРГЕР
 	$('.menu__icon').click(function (event) {
 		$('.menu__icon, .menu__body').toggleClass('active');
 		$('body').toggleClass('lock');
 	});
+	// АВТОЗАКРЫТИЕ МЕНЮ БУРГЕР
+	$('.menu__link').click(function (event) {
+		$('.menu__icon, .menu__body').removeClass('active');
+		$('body').removeClass('lock');
+	})
 
 
+	// ВЫСКАКИВАЮЩИЕ БЛОКИ В СЕКТОРЕ PRICING
 	$('.pricing__row--column1').hover(function (event) {
 		$('.item4--column1').toggleClass('active');
 	});
@@ -15,6 +22,7 @@ $(document).ready(function () {
 		$('.item4--column3').toggleClass('active');
 	});
 
+	// ВКЛАДКИ-ТАБЫ
 	$('.tabs__item').click(function (e) {
 		e.preventDefault();
 

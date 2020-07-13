@@ -60,12 +60,14 @@ h2 {
 	color: #ffffff;
 	font-size: 33px;
 	text-align: center;
-	margin: 130px 70px 16px 0px;
+	padding: 130px 70px 16px 0px;
 	@media (max-width: 1100px) {
-		margin: 100px 0px 25px 0px;
+		// margin: 0px 0px 25px 0px;
+		padding: 100px 0px 25px 0px;
 	}
 	@media (max-width: 767px) {
-		margin: 100px 0px 25px 0px;
+		// margin: 0px 0px 25px 0px;
+		padding: 100px 0px 25px 0px;
 	}
 }
 .nav {
@@ -355,42 +357,57 @@ h2 {
 	&__name {
 		margin: 0px 0px 35px 0px;
 		@include flexbox();
-		.name {
-			padding: 0px 0px 0px 14px;
+		.name::placeholder {
 			font-family: "Open Sans";
 			font-size: 14px;
 			line-height: 1.2;
-			font-weight: 400;
 			color: #bdbdbd;
 			opacity: 0.6;
+		}
+		.name {
+			padding: 0px 0px 0px 14px;
+			font-family: "Open Sans";
+			font-size: 16px;
+			line-height: 1.2;
+			color: #000;
 		}
 	}
 
 	&__email {
 		margin: 0px 0px 46px 0px;
 		@include flexbox();
-		.mail {
-			padding: 0px 0px 0px 14px;
+		.mail::placeholder {
 			font-family: "Open Sans";
 			font-size: 14px;
 			line-height: 1.2;
-			font-weight: 400;
 			color: #bdbdbd;
 			opacity: 0.6;
+		}
+		.mail {
+			padding: 0px 0px 0px 14px;
+			font-family: "Open Sans";
+			font-size: 16px;
+			line-height: 1.2;
+			color: #000;
 		}
 	}
 
 	&__password {
 		margin: 0px 0px 48px 0px;
 		@include flexbox();
-		.password {
-			padding: 0px 0px 0px 14px;
+		.password::placeholder {
 			font-family: "Open Sans";
 			font-size: 14px;
 			line-height: 1.2;
-			font-weight: 400;
 			color: #bdbdbd;
 			opacity: 0.6;
+		}
+		.password {
+			padding: 0px 0px 0px 14px;
+			font-family: "Open Sans";
+			font-size: 16px;
+			line-height: 1.2;
+			color: #000;
 		}
 	}
 }
