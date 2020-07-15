@@ -30,6 +30,13 @@
 	margin: 0px auto;
 }
 
+@media handheild {
+	*:hover {
+		transition: none;
+		transform: none;
+	}
+}
+
 @import "_header";
 @import "_main";
 @import "_footer";

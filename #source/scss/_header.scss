@@ -96,12 +96,21 @@ h2 {
 				content: "";
 				position: absolute;
 				width: 100%;
-				height: 2px;
-				background-color: #ff9b51;
+				border-top: 2px solid #ff9b51;
+				bottom: -12px;
 				left: 0;
-				bottom: -7px;
 			}
 		}
+		@media (max-width: 1000px) {
+			.menu__link:hover {
+				opacity: 0.8;
+				color: #ffffff;
+				&::after {
+					content: none;
+				}
+			}
+		}
+
 		li {
 			position: relative;
 			margin: 0px 48px 0px 0px;
