@@ -10,6 +10,13 @@ $(document).ready(function () {
 		$('body').removeClass('lock');
 	})
 
+	// ПЛАВНАЯ ПРОКРУТКА ДО ЯКОРЯ
+	$('a.menu__link, a.header__logo').click(function () {
+		let target = $(this).attr('href');
+		$('html, body').animate({
+			scrollTop: $(target).offset().top - 70
+		}, 1000)
+	});
 
 	// ВЫСКАКИВАЮЩИЕ БЛОКИ В СЕКТОРЕ PRICING
 	$('.pricing__row--column1').hover(function (event) {

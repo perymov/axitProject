@@ -91,7 +91,9 @@ h6 {
 
 /*----------Конец файла обнуляющих стилей-----------*/
 .wrapper {
+  width: 100%;
   min-height: 100%;
+  overflow: hidden;
   font-family: "Open Sans";
 }
 
@@ -250,7 +252,22 @@ h2 {
   }
 }
 
+.nav__menu .menu__link:hover {
+  color: #ff9b51;
+}
+
+.nav__menu .menu__link:hover:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #ff9b51;
+  left: 0;
+  bottom: -7px;
+}
+
 .nav__menu li {
+  position: relative;
   margin: 0px 48px 0px 0px;
 }
 
@@ -767,9 +784,11 @@ h2 {
   display: -ms-flexbox;
   display: flex;
   font-size: 0;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .social .container {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -779,14 +798,6 @@ h2 {
     text-align: center;
     margin: 0;
   }
-}
-
-.social .container .icons {
-  max-width: 634px;
-}
-
-.social .container .icons img {
-  width: 100%;
 }
 
 .social {
@@ -810,7 +821,6 @@ h2 {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 360px;
           flex: 0 0 360px;
-  margin: 0px 83px 0px 0px;
 }
 
 @media (max-width: 900px) {
@@ -853,12 +863,42 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 634px;
+          flex: 0 1 634px;
 }
 
 @media (max-width: 900px) {
   .social__column-2 {
     margin: 0px 0px 20px 0px;
   }
+}
+
+.media__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 634px;
+          flex: 0 1 634px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media (max-width: 600px) {
+  .media__icons {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.media__icons span {
+  font-family: FontAwesome;
+  font-size: 48px;
+  line-height: 1.2;
+  color: #cccccc;
+  padding: 0px 12px;
 }
 
 /*----------------------------------TABS---------------------------------------------*/
@@ -1668,6 +1708,9 @@ h2 {
     max-width: 80%;
     margin: 0px 0px 40px 0px;
   }
+  .main-column:last-child {
+    margin: 0;
+  }
 }
 
 .advantages-column1__item {
@@ -1853,6 +1896,12 @@ h2 {
   background-color: #ff8b38;
   padding: 14px 0px 9px 0;
   display: none;
+}
+
+@media (max-width: 1000px) {
+  .button-pricing__item4 {
+    display: block;
+  }
 }
 
 .button-pricing__item5 {
@@ -2081,6 +2130,13 @@ h2 {
 @media (max-width: 1000px) {
   .contact__block {
     width: 60%;
+    margin: 0px auto 20px;
+  }
+}
+
+@media (max-width: 797px) {
+  .contact__block {
+    width: 80%;
     margin: 0px auto 20px;
   }
 }
@@ -2340,6 +2396,12 @@ h2 {
   }
 }
 
+@media (max-width: 797px) {
+  .textarea {
+    width: 80%;
+  }
+}
+
 /*----------------------------------FOOTER---------------------------------------------*/
 .footer {
   height: 85px;
@@ -2353,10 +2415,26 @@ h2 {
 
 .footer__icons {
   padding: 20px 15px 15px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-.footer__icons img {
-  width: 100%;
+@media (max-width: 600px) {
+  .footer__icons {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.footer__icons span {
+  font-family: FontAwesome;
+  font-size: 24px;
+  line-height: 1.2;
+  color: #cccccc;
 }
 
 .footer__text {
@@ -2364,4 +2442,5 @@ h2 {
   font-size: 12px;
   color: #ffffff;
   text-align: center;
+  padding: 0px 0px 15px 0px;
 }

@@ -2,17 +2,12 @@
 
 .social .container {
 	@include flexbox();
-	@media (max-width: 900px) {
+	justify-content: space-around;
+	@media (max-width: 1000px) {
 		flex-wrap: wrap;
 		justify-content: center;
 		text-align: center;
 		margin: 0;
-	}
-	.icons {
-		max-width: 634px;
-		img {
-			width: 100%;
-		}
 	}
 }
 
@@ -25,7 +20,6 @@
 	}
 	&__column-1 {
 		flex: 0 0 360px;
-		margin: 0px 83px 0px 0px;
 		@media (max-width: 900px) {
 			flex: 0 0 100%;
 			margin: 0;
@@ -55,9 +49,25 @@
 	&__column-2 {
 		@include flexbox();
 		align-items: center;
+		flex: 0 1 634px;
 		@media (max-width: 900px) {
 			margin: 0px 0px 20px 0px;
 		}
+	}
+}
+.media__icons {
+	@include flexbox();
+	flex: 0 1 634px;
+	justify-content: space-around;
+	@media (max-width: 600px) {
+		flex-wrap: wrap;
+	}
+	span {
+		font-family: FontAwesome;
+		font-size: 48px;
+		line-height: 1.2;
+		color: #cccccc;
+		padding: 0px 12px;
 	}
 }
 
@@ -579,6 +589,9 @@
 	@media (max-width: 1000px) {
 		max-width: 80%;
 		margin: 0px 0px 40px 0px;
+		&:last-child {
+			margin: 0;
+		}
 	}
 }
 .advantages-column1 {
@@ -728,6 +741,9 @@
 		background-color: #ff8b38;
 		padding: 14px 0px 9px 0;
 		display: none;
+		@media (max-width: 1000px) {
+			display: block;
+		}
 	}
 	&__item5 {
 		background-color: #ff8b38;
@@ -923,6 +939,10 @@
 			width: 60%;
 			margin: 0px auto 20px;
 		}
+		@media (max-width: 797px) {
+			width: 80%;
+			margin: 0px auto 20px;
+		}
 	}
 
 	&__button {
@@ -1046,5 +1066,8 @@
 	width: 100%;
 	@media (max-width: 1000px) {
 		width: 60%;
+	}
+	@media (max-width: 797px) {
+		width: 80%;
 	}
 }
